@@ -11,7 +11,7 @@ SceneMain::SceneMain()
 {
 	m_hPlayerGraphic = -1;
 	m_hShotGraphic = -1;
-	m_shotInterval = 0;
+	
 }
 SceneMain::~SceneMain()
 {
@@ -26,12 +26,12 @@ void SceneMain::init()
 
 	m_player.setHandle(m_hPlayerGraphic);
 	m_player.init();
+	m_player.setMain(this);
 
 	for (auto& shot : m_shot)
 	{
 		shot.setHandle(m_hShotGraphic);
 	}
-	m_shotInterval = 0;
 }
 
 // 終了処理
@@ -44,23 +44,11 @@ void SceneMain::end()
 // 毎フレームの処理
 void SceneMain::update()
 {
-	m_player.update();
+	m_player.draw();
+
 	for (auto& shot : m_shot)
 	{
 		shot.update();
-	}
-
-	// キー入力処理
-	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-	if (padState & PAD_INPUT_1)
-	{
-		for (auto& shot : m_shot)
-		{
-			if (shot.isExist()) continue;
-			shot.start(m_player.getPos());
-			break;
-		}
-		
 	}
 }
 
@@ -73,21 +61,24 @@ void SceneMain::draw()
 	{
 		shot.draw();
 	}
-	m_shotInterval--;
-	if (m_shotInterval < 0) m_shotInterval = 0;
 
-
-	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-	if((padState & PAD_INPUT_1) && (m_shotInterval <= 0))
+	// 現在存在している弾の数を表示
+	int shotNum = 0;
+	for (auto& shot : m_shot)
 	{
-		for (auto& shot : m_shot)
-		{
-			if (shot.isExist())continue;
-			shot.start(m_player.getPos());
-			m_shotInterval = kShotInterval;
-			break;
-		}
-		
-		
+		if (shot.isExist())shotNum++;
 	}
+	DrawFormatString(0, 0, GetColor(225, 225, 225), "弾の数：%d", shotNum);
+}
+
+bool SceneMain::createShot(Vec2 pos)
+{
+	for (auto& shot : m_shot)
+	{
+		if (shot.isExist())continue;
+
+		shot.start(pos);
+		return true;
+	}
+	return false;
 }
