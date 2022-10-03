@@ -1,6 +1,12 @@
 #include "DxLib.h"
 #include "shot.h"
 
+namespace
+{
+	constexpr float kShotSpeed = 8.0f;
+
+
+}
 
 Shot::Shot()
 {
@@ -8,8 +14,10 @@ Shot::Shot()
 	m_pos.x = 100.0f;
 	m_pos.y = 100.0f;
 
-	m_vec.x = 8.0f;
+	m_vec.x = 0.0f;
 	m_vec.y = 0.0f;
+
+	m_isExist = false;
 }
 
 Shot::~Shot()
@@ -17,8 +25,19 @@ Shot::~Shot()
 
 }
 
+void Shot::start(Vec2 pos)
+{
+	m_isExist = true;
+	m_pos = pos;
+
+	m_vec.x = kShotSpeed;
+	m_vec.y = 0.0f;
+
+}
+
 void Shot::update()
 {
+	if (!m_isExist) return;
 	m_pos += m_vec;
 }
 // •\Ž¦
