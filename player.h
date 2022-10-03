@@ -30,7 +30,7 @@ public:
 private:
 	int m_handle;
 
-	// SceneMainのぽインタ
+	// SceneMainのポインタ
 	SceneMain* m_pMain;
 
 	// 表示位置

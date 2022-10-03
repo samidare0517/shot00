@@ -44,7 +44,7 @@ void SceneMain::end()
 // –ˆƒtƒŒ[ƒ€‚Ìˆ—
 void SceneMain::update()
 {
-	m_player.draw();
+	m_player.update();
 
 	for (auto& shot : m_shot)
 	{
