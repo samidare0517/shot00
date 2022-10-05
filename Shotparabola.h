@@ -2,11 +2,11 @@
 
 #include  "ShotBase.h"
 
-class ShotParabola : public ShotBase
+class ShotSin : public ShotBase
 {
 public:
-	ShotParabola();
-	virtual ~ShotParabola(){}
+	ShotSin();
+	virtual ~ShotSin(){}
 
 	// ショット開始
 	virtual void start(Vec2 pos);

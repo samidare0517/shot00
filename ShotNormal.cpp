@@ -17,6 +17,7 @@ void ShotNormal::start(Vec2 pos)
 
 void ShotNormal::update()
 {
+	// ‰æ–ÊŠO‚Éo‚½‚ç’e‚ð‰ñŽû
 	if (!m_isExist) return;
 	m_pos += m_vec;
 	if (m_pos.x > Game::kScreenWidth)
