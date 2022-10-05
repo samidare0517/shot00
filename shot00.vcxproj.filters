@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Shot">
+      <UniqueIdentifier>{2764d724-48d8-4ebd-9f42-d53bdd2c2553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Shot">
+      <UniqueIdentifier>{5a7b88b6-2f29-4722-b7a0-4e1c67c3114d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -28,13 +34,16 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ShotBase.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Shot</Filter>
     </ClCompile>
     <ClCompile Include="ShotNormal.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="ShotBound.cpp">
+      <Filter>ソース ファイル\Shot</Filter>
     </ClCompile>
     <ClCompile Include="ShotSin.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Shot</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,13 +60,16 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ShotBase.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\Shot</Filter>
     </ClInclude>
     <ClInclude Include="ShotNormal.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="ShotBound.h">
+      <Filter>ヘッダー ファイル\Shot</Filter>
     </ClInclude>
     <ClInclude Include="ShotSin.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\Shot</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -144,6 +144,7 @@
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="ShotBase.cpp" />
     <ClCompile Include="ShotNormal.cpp" />
+    <ClCompile Include="ShotBound.cpp" />
     <ClCompile Include="ShotSin.cpp" />
     <ClCompile Include="Vec2.cpp" />
   </ItemGroup>
@@ -153,6 +154,7 @@
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="ShotBase.h" />
     <ClInclude Include="ShotNormal.h" />
+    <ClInclude Include="ShotBound.h" />
     <ClInclude Include="ShotSin.h" />
     <ClInclude Include="Vec2.h" />
   </ItemGroup>
