@@ -1,6 +1,7 @@
 #pragma once
 
 #include "player.h"
+#include "ShotBase.h"
 #include "ShotNormal.h"
 #include "ShotBound.h"
 #include "ShotSin.h"
@@ -38,9 +39,9 @@ private:
 	// プレイヤー
 	Player m_player;
 	// ショット
-//	ShotBase* m_pShot[kShotMax];
+	ShotBase* m_pShot[kShotMax];
 
-	ShotNormal* m_pShotNormal[kShotMax];
-	ShotBound* m_pShotBound[kShotMax];
-	ShotSin* m_pShotSin[kShotMax];
+//	ShotNormal* m_pShotNormal[kShotMax];
+//	ShotBound* m_pShotBound[kShotMax];
+//	ShotSin* m_pShotSin[kShotMax];
 };
