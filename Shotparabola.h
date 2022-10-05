@@ -5,7 +5,7 @@
 class ShotParabola : public ShotBase
 {
 public:
-	ShotParabola(){}
+	ShotParabola();
 	virtual ~ShotParabola(){}
 
 	// ショット開始
@@ -13,4 +13,9 @@ public:
 
 	// 更新
 	virtual void update();
+
+private:
+	Vec2 m_basePos;
+	float m_sinRate;
+
 };
