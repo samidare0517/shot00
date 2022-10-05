@@ -1,7 +1,7 @@
 #pragma once
 
 #include "player.h"
-#include "Shotparabola.h"
+#include "ShotSin.h"
 
 class SceneMain
 {
@@ -35,6 +35,6 @@ private:
 	Player m_player;
 	// ƒVƒ‡ƒbƒg
 //	ShotNormal m_shot[kShotMax];
-	ShotParabola m_shot[kShotMax];
+	ShotSin m_shot[kShotMax];
 
 };

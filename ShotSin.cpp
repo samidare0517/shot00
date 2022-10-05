@@ -1,4 +1,4 @@
-#include "Shotparabola.h"
+#include "ShotSin.h"
 #include "game.h"
 
 namespace
