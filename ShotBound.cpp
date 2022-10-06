@@ -4,7 +4,7 @@
 
 namespace
 {
-	constexpr float kShotSpeed = 3.0f;
+	constexpr float kShotSpeed = 8.0f;
 
 	// íµÇÀï‘ÇÈâÒêî
 	constexpr int kboundMax = 3;
@@ -24,8 +24,8 @@ void ShotBound::start(Vec2 pos)
 
 
 
-	m_vec.x = cosf(rad) * kShotSpeed;
-	m_vec.y = sinf(rad) * kShotSpeed;
+	m_vec.x = cosf(rad);
+	m_vec.y = sinf(rad);
 	m_vec *= kShotSpeed;
 
 	m_boundCount = 0;
