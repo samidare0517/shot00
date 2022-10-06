@@ -36,5 +36,5 @@ private:
 	Player m_player;
 	// ƒVƒ‡ƒbƒg
 	std::vector< ShotBase*> m_pShotVt;
-//	ShotBase* m_pShot[kShotMax];
+
 };
