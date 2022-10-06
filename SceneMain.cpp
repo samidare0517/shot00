@@ -65,40 +65,24 @@ void SceneMain::update()
 
 		pShot->update();
 		
-		if (pShot->isExist())
+		if (!pShot->isExist())
 		{
 			delete pShot;
 			pShot = nullptr;
 
 			// vectorの要素削除
-
+			it = m_pShotVt.erase(it);
+			continue;
 		}
 
 		it++;
 	}
-
-#if false
-	for (auto& pShot : m_pShotVt)
-	{
-		if (!pShot) continue;
-		pShot->update();
-		if (pShot->isExist())
-		{
-			delete pShot;
-			pShot = nullptr;
-
-			// vectorの要素削除
-
-		}
-	}
-#endif
 }
 
 // 毎フレームの描画
 void SceneMain::draw()
 {
 	m_player.draw();
-
 	for (auto& pShot : m_pShotVt)
 	{
 		if (!pShot) continue;
